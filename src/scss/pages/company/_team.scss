@@ -1,0 +1,44 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.team {
+
+  article {
+    text-align: center;
+  }
+
+  img {
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: 24px;
+
+    +p {
+      max-width: 730px;
+      letter-spacing: 0.05em;
+      line-height: 1.7;
+      margin-bottom: 65px;
+    }
+  }
+
+  h3 {
+    color: var(--color-orange-900);
+    margin: 0 auto 5px;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: var(--fw-700);
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    color: var(--color-gray);
+  }
+
+}

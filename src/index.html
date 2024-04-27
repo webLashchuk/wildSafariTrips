@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Home"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "home", "class":""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"",
+        "image":"home.jpg",
+        "title":"Explore the Wild with Us",
+        "text":"Experience the thrill of a personalized African safari adventure with WildSafari Trips.",
+        "btnClass":"btn--hero"
+        }
+      </include>
+
+      <include src="./html/_case.html">
+        {
+        "class":"",
+        "image":"east-africa.jpg",
+        "title":"East Africa",
+        "subTitle":"(Kenya, Tanzania, Uganda)",
+        "description":"Discover the iconic landscapes of East Africa, where the vast savannahs of Kenya and Tanzania
+        offer world-class wildlife viewing, including the Great Migration. In Uganda, immerse yourself in the misty
+        mountains home to the endangered mountain gorillas.",
+        "linkClass":"",
+        "btnClass":"hidden"
+        }
+      </include>
+
+      <include src="./html/_case.html">
+        {
+        "class":"inner--reverse",
+        "image":"southern-africa.jpg",
+        "title":"Southern Africa",
+        "subTitle":"(South Africa, Botswana, Zambia)",
+        "description":"Embark on a journey through Southern Africa's diverse ecosystems, from South Africa's famous
+        Kruger National Park to the untouched wilderness of Botswana's Okavango Delta. Don't miss the breathtaking
+        Victoria Falls on the Zambia-Zimbabwe border.",
+        "linkClass":"",
+        "btnClass":"hidden"
+        }
+      </include>
+
+      <include src="./html/_case.html">
+        {
+        "class":"",
+        "image":"central-africa.jpg",
+        "title":"Central Africa",
+        "subTitle":"(Rwanda, Congo, Central African Republic)",
+        "description":"Explore the heart of Africa in regions rich with tropical forests and rare wildlife. Trek through
+        Rwanda's verdant hills to encounter gorillas, or venture into the dense jungles of Congo and the Central African
+        Republic for a truly off-the-beaten-path adventure.",
+        "linkClass":"",
+        "btnClass":"hidden"
+        }
+      </include>
+
+      <include src="./html/_categories.html"></include>
+
+      <include src="./html/home/_gallery-home.html"></include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

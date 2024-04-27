@@ -1,0 +1,127 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-400);
+  font-style: normal;
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.4;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  font-optical-sizing: auto;
+  font-variant-numeric: lining-nums;
+
+  &__body {
+    min-width: 320px;
+    min-height: var(--vh);
+  }
+
+  &.open {
+    overflow: hidden;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+
+  &--wide {
+    max-width: 1230px;
+  }
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+.overlay {
+  position: relative;
+
+  &::before {
+    @include pseudo;
+    z-index: 1;
+    background-color: var(--color-black);
+    opacity: 0.4;
+    inset: 0;
+  }
+
+  &--darked {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+
+  &--white {
+    &::before {
+      background: var(--gradient);
+      opacity: 1
+    }
+  }
+}
+
+.logo {
+  max-width: 248px;
+  width: 100%;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 0.7;
+
+    @include media(tablet) {
+      opacity: 1;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @include media(tablet-wide) {
+    max-width: 150px;
+  }
+
+  @include media(mobile-l) {
+    max-width: 100px;
+  }
+}
+
+.section {
+  padding-block: 85px;
+
+  @include media(tablet) {
+    padding-block: rem(50);
+  }
+}
+
+.main--top {
+  padding-top: 203px;
+
+  @include media(tablet) {
+    padding-top: 70px;
+  }
+}
+
+.link {
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: 0.5;
+
+    @include media(tablet) {
+      opacity: 1;
+    }
+  }
+}

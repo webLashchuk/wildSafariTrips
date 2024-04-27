@@ -1,0 +1,58 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  margin: 0 auto;
+  font-weight: var(--fw-400);
+  width: 100%;
+  color: var(--color-white);
+  padding-block: 24px;
+  text-transform: capitalize;
+  transition-property: transform, padding;
+  transition-duration: 0.15s;
+
+  @include media(tablet-wide) {
+    padding-block: 15px;
+  }
+
+  .scroll {
+    background-color: var(--color-yellow-100);
+  }
+
+  .logo {
+    filter: invert(100%) sepia(0%) saturate(445%) hue-rotate(69deg) brightness(116%) contrast(100%);
+
+    &--tablet {
+      display: none;
+
+      @include media(tablet) {
+        display: block;
+        margin-right: auto;
+      }
+    }
+  }
+
+  &.hide {
+    transform: translateY(calc(-100% - 30px));
+  }
+
+  &.scroll {
+    background-color: var(--color-dark);
+    padding-block: 10px;
+  }
+
+  &--secondary:not(.scroll) {
+    .nav {
+      color: var(--color-dark);
+    }
+
+    .logo {
+      filter: invert(12%) sepia(4%) saturate(2145%) hue-rotate(332deg) brightness(98%) contrast(86%);
+    }
+  }
+}

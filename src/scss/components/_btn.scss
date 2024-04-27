@@ -1,0 +1,129 @@
+/* stylelint-disable declaration-no-important */
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+*[class].btn {
+  position: relative;
+  @include flex-all-center;
+  max-width: fit-content;
+  border: 2px solid var(--color-white);
+  white-space: nowrap;
+  border-radius: 0;
+  font-weight: var(--fw-500);
+  font-size: 16px;
+  padding: 16px 20px;
+  line-height: 1;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-white) !important;
+  background-color: transparent !important;
+  transition-property: background-color, color, border-color;
+  transition-duration: 0.2s;
+
+  &--user {
+    border-color: transparent;
+    padding: 18px 20px;
+
+    &:hover {
+      border-color: var(--color-white);
+
+      @include media(tablet) {
+        border-color: transparent;
+      }
+    }
+
+    .header--secondary:not(.scroll) & {
+      color: var(--color-dark) !important;
+
+      &:hover {
+        border-color: var(--color-dark);
+
+        @include media(tablet) {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+
+  &--case {
+    &:hover {
+      background-color: var(--color-white) !important;
+      color: var(--color-dark) !important;
+
+      @include media(tablet) {
+        background-color: transparent !important;
+        color: var(--color-white) !important;
+      }
+    }
+  }
+
+  &--orange,
+  &--more {
+    background-color: var(--color-orange) !important;
+    border-color: var(--color-orange);
+
+    @include media(tablet) {
+      background-color: var(--color-orange) !important;
+      border-color: var(--color-orange);
+    }
+  }
+
+  &--orange {
+    &:hover {
+      color: var(--color-white) !important;
+      background-color: transparent !important;
+      border-color: var(--color-white);
+
+      @include media(tablet) {
+        background-color: var(--color-orange) !important;
+        border-color: transparent;
+      }
+    }
+
+    .header--secondary & {
+      &:hover {
+        color: var(--color-orange) !important;
+        background-color: transparent !important;
+        border-color: var(--color-orange);
+
+        @include media(tablet) {
+          color: var(--color-white) !important;
+          background-color: var(--color-orange) !important;
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  &--more {
+    min-width: 225px;
+    padding: 18px 24px;
+
+    &:hover {
+      color: var(--color-orange) !important;
+      background-color: transparent !important;
+      border-color: var(--color-orange);
+
+      @include media(tablet) {
+        color: var(--color-white) !important;
+      }
+    }
+  }
+
+  &--white {
+    background-color: var(--color-white) !important;
+    color: var(--color-dark) !important;
+
+    &:hover {
+      color: var(--color-white) !important;
+      background-color: transparent !important;
+
+      @include media(tablet) {
+        background-color: var(--color-white) !important;
+        color: var(--color-dark) !important;
+      }
+    }
+  }
+}

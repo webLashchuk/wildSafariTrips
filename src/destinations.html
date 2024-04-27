@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Home"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "home", "class":""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"",
+        "image":"destinations.jpg",
+        "title":"Explore Our Destinations",
+        "text":"Journey through breathtaking landscapes and encounter wildlife in its purest form.",
+        "btnClass":"btn--hero"
+        }
+      </include>
+
+      <include src="./html/_case.html">
+        {
+        "class":"",
+        "image":"east-africa.jpg",
+        "title":"East Africa",
+        "subTitle":"(Kenya, Tanzania, Uganda)",
+        "description":"Discover the iconic landscapes of East Africa, where the vast savannahs of Kenya and Tanzania
+        offer world-class wildlife viewing, including the Great Migration. In Uganda, immerse yourself in the misty
+        mountains home to the endangered mountain gorillas.",
+        "linkClass":"hidden",
+        "btnClass":""
+        }
+      </include>
+
+      <include src="./html/destinations/_trip.html">
+        {
+        "class":"",
+        "title":"Serengeti National Park, Tanzania",
+        "imgFirst":"serengeti-first.jpg",
+        "imgSecond":"serengeti-second.jpg",
+        "alt":"Serengeti National Park, Tanzania",
+        "text":"Experience the vastness of the Serengeti, famous for its annual wildebeest migration, and home to a
+        spectacular array of wildlife including lions, elephants, and cheetahs."
+        }
+      </include>
+
+      <include src="./html/_case.html">
+        {
+        "class":"inner--reverse",
+        "image":"southern-africa.jpg",
+        "title":"Southern Africa",
+        "subTitle":"(South Africa, Botswana, Zambia)",
+        "description":"Embark on a journey through Southern Africa's diverse ecosystems, from South Africa's famous
+        Kruger National Park to the untouched wilderness of Botswana's Okavango Delta. Don't miss the breathtaking
+        Victoria Falls on the Zambia-Zimbabwe border.",
+        "linkClass":"hidden",
+        "btnClass":""
+        }
+      </include>
+
+      <include src="./html/destinations/_trip.html">
+        {
+        "class":"trip--reverse",
+        "title":"Okavango Delta, Botswana",
+        "imgFirst":"okavango-first.jpg",
+        "imgSecond":"okavango-second.jpg",
+        "alt":"Okavango Delta, Botswana",
+        "text":"Explore the unique wetland paradise of the Okavango Delta, a UNESCO World Heritage site, where you can
+        encounter a rich diversity of animals from elephants to rare birds."
+        }
+      </include>
+
+      <include src="./html/_case.html">
+        {
+        "class":"",
+        "image":"central-africa.jpg",
+        "title":"Central Africa",
+        "subTitle":"(Rwanda, Congo, Central African Republic)",
+        "description":"Explore the heart of Africa in regions rich with tropical forests and rare wildlife. Trek through
+        Rwanda's verdant hills to encounter gorillas, or venture into the dense jungles of Congo and the Central African
+        Republic for a truly off-the-beaten-path adventure.",
+        "linkClass":"hidden",
+        "btnClass":""
+        }
+      </include>
+
+      <include src="./html/destinations/_trip.html">
+        {
+        "class":"",
+        "title":"Virunga National Park, Congo",
+        "imgFirst":"virunga-first.jpg",
+        "imgSecond":"virunga-second.jpg",
+        "alt":"Virunga National Park, Congo",
+        "text":"Venture into the heart of Africa at Virunga National Park, one of the most biologically diverse areas on
+        earth, and the haven for the critically endangered mountain gorillas."
+        }
+      </include>
+
+      <include src="./html/_categories.html"></include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

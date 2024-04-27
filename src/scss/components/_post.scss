@@ -1,0 +1,67 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.post {
+  min-height: 615px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    padding-inline: 130px 20px;
+    background-color: var(--color-white);
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
+    min-height: 615px;
+    max-width: 605px;
+    width: 100%;
+  }
+
+  h2,
+  p {
+    max-width: 570px;
+  }
+
+  p {
+    color: var(--color-gray);
+  }
+
+  &--reverse {
+    .post__inner {
+      order: 1;
+      padding-inline: 20px 130px;
+    }
+
+    .post__wrapper {
+      justify-content: flex-end;
+    }
+
+    img {
+      order: 2;
+    }
+  }
+
+  &--features {
+    min-height: 830px;
+
+    img {
+      min-height: 830px;
+    }
+
+    h3 {
+      color: var(--color-orange-900);
+    }
+  }
+}

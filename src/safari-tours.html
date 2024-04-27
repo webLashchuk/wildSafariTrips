@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Safari Tours"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "safari tours", "class":""}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"",
+        "image":"safari-tours.jpg",
+        "title":"Safari Tours",
+        "text":"Choose your adventure from a range of tours designed to show you the wild heart of Africa.",
+        "btnClass":"btn--hero"
+        }
+      </include>
+
+      <include src="./html/safari-tours/_tour.html">
+        {
+        "addClass":"",
+        "image":"classic.jpg",
+        "alt":"Classic Safari Adventures",
+        "title":"Classic Safari Adventures",
+        "text":"Experience the timeless beauty of Africa with our Classic Safari Adventures. Journey through the vast
+        plains in search of the Big Five and witness the raw and natural beauty of the wilderness.",
+        "link":"classic-kenya-tanzania.html"
+        }
+      </include>
+
+      <include src="./html/safari-tours/_tour.html">
+        {
+        "addClass":"post--reverse",
+        "image":"luxury.jpg",
+        "alt":"Luxury Safari Experiences",
+        "title":"Luxury Safari Experiences",
+        "text":"Indulge in opulence amid nature with our Luxury Safari Experiences. Enjoy bespoke services, exquisite
+        lodges, and private guides to explore Africa’s pristine landscapes in the utmost comfort.",
+        "link":"luxury-botswana-zambia.html"
+        }
+      </include>
+
+      <include src="./html/safari-tours/_tour.html">
+        {
+        "addClass":"",
+        "image":"family-friendly.jpg",
+        "alt":"Family-Friendly Tours",
+        "title":"Family-Friendly Tours",
+        "text":"Our Family-Friendly Tours offer a safe, educational, and fun adventure for all ages. Engage in wildlife
+        spotting, cultural visits, and activities designed to delight children and adults alike.",
+        "link":"family-friendly-south-africa.html"
+        }
+      </include>
+
+      <include src="./html/safari-tours/_tour.html">
+        {
+        "addClass":"post--reverse",
+        "image":"adventure.jpg",
+        "alt":"Adventure Expeditions",
+        "title":"Adventure Expeditions",
+        "text":"For the thrill-seekers, our Adventure Expeditions provide an exhilarating escape into the less-traveled
+        paths of Africa. Hike, canoe, and camp under the stars in some of the continent’s most remote areas.",
+        "link":"adventure-rwanda-uganda.html"
+        }
+      </include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>
