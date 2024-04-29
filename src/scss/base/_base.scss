@@ -31,8 +31,8 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
-  width: 100%;
   max-width: var(--container-width);
+  width: 100%;
 
   &--wide {
     max-width: 1230px;
@@ -75,7 +75,7 @@ body {
 .logo {
   max-width: 248px;
   width: 100%;
-  transition: opacity .3s;
+  transition: opacity .2s, filter .3s;
 
   &:hover {
     opacity: 0.7;
@@ -93,8 +93,8 @@ body {
     max-width: 150px;
   }
 
-  @include media(mobile-l) {
-    max-width: 100px;
+  @include media(mobile-s) {
+    max-width: 120px;
   }
 }
 

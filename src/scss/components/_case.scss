@@ -8,9 +8,26 @@
   min-height: 952px;
   padding-block: 140px;
 
+  @include media(tablet) {
+    min-height: 652px;
+  }
+
   h2 {
+    font-size: 64px;
     line-height: 1.1;
     margin-bottom: 15px;
+
+    @include media(tablet-wide) {
+      font-size: 54px;
+    }
+
+    @include media(tablet) {
+      font-size: 44px;
+    }
+
+    @include media(mobile-m) {
+      font-size: 34px;
+    }
   }
 
   .inner {
@@ -41,15 +58,19 @@
     }
   }
 
-  h2 {
-    font-size: 64px;
-  }
-
   p {
     font-size: 22px;
     color: inherit;
     line-height: 1.47;
     margin-bottom: 25px;
+
+    @include media(tablet) {
+      font-size: 20px;
+    }
+
+    @include media(mobile-m) {
+      font-size: 16px;
+    }
   }
 
   span {

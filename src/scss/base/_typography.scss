@@ -39,13 +39,21 @@ h2,
   }
 
   @include media(mobile-m) {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
 h3 {
   font-size: 32px;
   text-transform: uppercase;
+
+  @include media(mobile-l) {
+    font-size: 24px;
+  }
+
+  @include media(mobile-m) {
+    font-size: 22px;
+  }
 }
 
 p {

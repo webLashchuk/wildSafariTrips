@@ -11,6 +11,7 @@
     width: 100%;
 
     @include media(tablet) {
+
       .logo--header {
         display: none;
       }
@@ -59,7 +60,10 @@
 
       @include media(tablet-wide) {
         margin-right: 25px;
+      }
 
+      @include media(tablet) {
+        margin-right: 0;
       }
     }
 
@@ -77,7 +81,7 @@
     white-space: nowrap;
     text-transform: capitalize;
     background-color: transparent;
-    transition: color .2s;
+    transition: color .2s opacity .2s;
   }
 
   .true {
@@ -95,6 +99,7 @@
 
     @include media(tablet) {
       margin: 0 auto;
+      gap: 30px;
     }
 
     @include media(mobile-m) {

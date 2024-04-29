@@ -2,23 +2,34 @@
 @use "../utils/mixins/"as*;
 
 .post {
-  min-height: 615px;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 
+  @include media(mobile-l) {
+    padding-block: 50px;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: flex-start;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+    }
   }
 
   &__inner {
-    display: flex;
+    @include flex-h-center;
     flex-direction: column;
-    justify-content: center;
     gap: 32px;
     padding-inline: 130px 20px;
+    padding-block: 30px;
     background-color: var(--color-white);
+
+    @include media(tablet-wide) {
+      padding-inline: 15px;
+    }
   }
 
   img {
@@ -27,6 +38,16 @@
     min-height: 615px;
     max-width: 605px;
     width: 100%;
+
+    @include media(tablet) {
+      min-height: 415px;
+      max-width: 400px;
+    }
+
+    @include media(mobile-l) {
+      aspect-ratio: 16/7;
+      max-width: 100%;
+    }
   }
 
   h2,
@@ -42,10 +63,18 @@
     .post__inner {
       order: 1;
       padding-inline: 20px 130px;
+
+      @include media(tablet-wide) {
+        padding-inline: 15px;
+      }
     }
 
     .post__wrapper {
       justify-content: flex-end;
+
+      @include media(mobile-l) {
+        flex-direction: column-reverse;
+      }
     }
 
     img {
@@ -54,10 +83,13 @@
   }
 
   &--features {
-    min-height: 830px;
 
     img {
       min-height: 830px;
+
+      @include media(tablet) {
+        min-height: 430px;
+      }
     }
 
     h3 {

@@ -5,12 +5,21 @@
   padding-block: 116px 100px;
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flex-sb;
+    gap: 30px;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+    }
   }
 
   &__inner {
     max-width: 490px;
+    width: 100%;
+
+    @include media(mobile-l) {
+      max-width: 100%;
+    }
 
     &:last-of-type {
       img {
@@ -32,9 +41,20 @@
   img {
     width: 100%;
     min-height: 490px;
+
+    @include media(mobile-l) {
+      min-height: 290px;
+      aspect-ratio: 16/7;
+    }
   }
 
   &--reverse {
+    .trip__wrapper {
+      @include media(mobile-l) {
+        flex-direction: column-reverse;
+      }
+    }
+
     .trip__inner {
       &:first-of-type {
         order: 2;

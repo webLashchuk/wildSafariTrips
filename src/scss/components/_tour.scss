@@ -13,9 +13,8 @@
   }
 
   &__inner {
-    display: flex;
+    @include flex-h-center;
     flex-direction: column;
-    justify-content: center;
     gap: 32px;
     padding-inline: 130px 20px;
     background-color: var(--color-white);

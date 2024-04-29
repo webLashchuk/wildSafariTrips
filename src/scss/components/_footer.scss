@@ -8,18 +8,22 @@
   .nav {
     @include flex-all-sb;
 
+    @include media(mobile-l) {
+      flex-direction: column;
+    }
+
     &__inner {
       @include flex-col;
       align-items: flex-start;
 
-      @include media(tablet) {
+      @include media(mobile-l) {
         align-items: center;
         margin-bottom: 30px;
       }
 
       a:first-of-type {
         margin-bottom: 25px;
-        line-height: 1.2;
+        line-height: 1.5;
         font-size: 20px;
 
         @include media(tablet) {
@@ -31,9 +35,9 @@
   }
 
   .btn {
+    padding: 15px 25px;
 
     &:not(:last-child) {
-      margin-right: 24px;
 
       @include media(mobile-m) {
         margin-right: 0;
@@ -56,7 +60,7 @@
   }
 
   &__bottom {
-    padding-block: 25px;
+    padding-block: 20px;
 
     @include media(mobile-l) {
       flex-direction: column-reverse;
@@ -84,7 +88,7 @@
     color: inherit;
 
     @include media(mobile-s) {
-      max-width: 250px;
+      max-width: 170px;
       font-size: 14px;
       text-align: center;
     }

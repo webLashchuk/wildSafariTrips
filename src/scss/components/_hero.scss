@@ -6,11 +6,11 @@
   @include cover-background;
 
   &__content {
-    @include flex-v-center;
+    @include flex-all-center;
     position: relative;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
+    gap: 32px;
     min-height: 100vh;
     z-index: 1;
 
@@ -21,19 +21,40 @@
 
     h1 {
       color: var(--color-white);
-      margin-bottom: rem(25);
-      line-height: 1.25;
+      line-height: 1.2;
+
+      @include media(tablet-wide) {
+        font-size: 100px;
+      }
+
+      @include media(tablet) {
+        font-size: 80px;
+      }
+
+      @include media(mobile-l) {
+        font-size: 60px;
+      }
+
+      @include media(mobile-l) {
+        font-size: 40px;
+      }
     }
 
     p {
+      max-width: 825px;
       font-size: 20px;
+      line-height: 1.6;
       font-weight: var(--fw-400);
       color: var(--color-white);
-      margin-bottom: rem(35);
+
+      @include media(mobile-l) {
+        font-size: 16px;
+      }
     }
   }
 
   .btn {
     min-width: 230px;
+    padding: 18px 20px;
   }
 }

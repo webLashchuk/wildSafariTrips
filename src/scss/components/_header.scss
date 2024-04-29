@@ -21,7 +21,7 @@
   }
 
   .scroll {
-    background-color: var(--color-yellow-100);
+    background-color: var(--color-dark);
   }
 
   .logo {
@@ -51,8 +51,53 @@
       color: var(--color-dark);
     }
 
+    .btn--user {
+      color: var(--color-dark) !important;
+
+      @include media(tablet) {
+        color: var(--color-white) !important;
+      }
+
+      &:hover {
+        border-color: var(--color-dark);
+
+        @include media(tablet) {
+          border-color: transparent;
+        }
+      }
+    }
+
     .logo {
       filter: invert(12%) sepia(4%) saturate(2145%) hue-rotate(332deg) brightness(98%) contrast(86%);
+    }
+
+    .burger {
+      span {
+        background-color: var(--color-dark);
+
+        &::before,
+        &::after {
+          @include pseudo;
+          background-color: var(--color-dark);
+        }
+      }
+    }
+
+    .opened {
+      .burger {
+        span {
+
+          &::before,
+          &::after {
+            @include pseudo;
+            background-color: var(--lines-color);
+          }
+        }
+      }
+
+      .logo {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(246deg) brightness(106%) contrast(104%);
+      }
     }
   }
 }
